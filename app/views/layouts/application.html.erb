@@ -8,6 +8,18 @@
 </head>
 <body>
 
+<% if session[:user_id] %>
+  	<%= link_to("Log Out", "/sessions", method: :delete) %>
+<% else %>
+	<%= form_tag '/sessions/create' do  %>
+	    Email: 
+	    <%= email_field_tag :email %>
+	    Password: 
+	    <%= password_field_tag :password %>
+	    <%= submit_tag "Log In" %>
+  	<% end %>
+<% end %>
+
 <%= yield %>
 
 </body>
