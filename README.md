@@ -25,18 +25,18 @@ Users Can Do the Following:
 
 
 ####Routes
-get '/' root#index
-get '/searches' searches#show
-post '/events'  events#create
-delete '/events/:id'  events#destroy
-get '/sessions/new'  sessions#new
-post '/sessions'  session#create
-delete '/sessions/:id' sessions#destroy
-post '/users'  users#create
-get '/users/:id'  users#show
-get '/users/:id/edit' users#edit
-put '/users/:id'  users#update
-delete '/users/:id'  users#destroy
+get '/' root#index<br>
+get '/searches' searches#show<br>
+post '/events'  events#create<br>
+delete '/events/:id'  events#destroy<br>
+get '/sessions/new'  sessions#new<br>
+post '/sessions'  session#create<br>
+delete '/sessions/:id' sessions#destroy<br>
+post '/users'  users#create<br>
+get '/users/:id'  users#show<br>
+get '/users/:id/edit' users#edit<br>
+put '/users/:id'  users#update<br>
+delete '/users/:id'  users#destroy<br>
 
 
 ####Database Design
