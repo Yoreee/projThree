@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Edit Form</h1>
+
+	<%= form_for @user do |f| %>
+	    <%= f.text_field :name, placeholder: 'name' %> <br>
+	    <%= f.text_field :email, placeholder: 'email' %> <br>
+	    <%= f.text_field :favorite_band, placeholder: 'favorite_band' %>
+	    <%= f.submit %>
+  	<% end %>
+</body>
+</html>

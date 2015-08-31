@@ -18,6 +18,13 @@ class UsersController < ApplicationController
         @user = User.find(session[:user_id])
     end
 
+    def update
+    	update_info = User.find(params[:id])
+    	update_info.update(user_params)
+
+    	redirect_to user_path
+    end
+
     private
 
     def user_params
