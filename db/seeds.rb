@@ -13,3 +13,5 @@ heather = User.create(name: 'heather', email: 'heather@heather.com', password: '
 
 
 party = Event.create(event_date: '2015-08-28', venue_name: 'output', venue_city: 'brooklyn', venue_state: 'NY', artists: 'hozier', ticket_url: 'www.output.com', user_id: 1)
+fun = Event.create(event_date: '2015-08-28', venue_name: 'output', venue_city: 'brooklyn', venue_state: 'NY', artists: 'hozier', ticket_url: 'www.output.com', user_id: 2)
+yeah = Event.create(event_date: '2015-08-28', venue_name: 'output', venue_city: 'brooklyn', venue_state: 'NY', artists: 'hozier', ticket_url: 'www.output.com', user_id: 1)

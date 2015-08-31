@@ -5,3 +5,12 @@
 <h3>Favorite Band: <%= @user.favorite_band %></h3>
 
 <%= link_to 'Edit User Info', edit_user_path(@user) %>
+
+<% @event.each do |f| %>
+	<div>
+		<h3><%= f.venue_name %></h3>
+		<p><%= f.event_date %></p>
+		<p><%= f.venue_city %>, <%= f.venue_state %></p>
+		<a href="<%=f.ticket_url%>">Buy Tickets</a>
+	</div>
+<% end %>
