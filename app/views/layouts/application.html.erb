@@ -16,7 +16,8 @@
     <% if session[:user_id] %>
      <%= link_to("Log Out", "/sessions", method: :delete) %>
     <% else %>
-    
+    <a href="#" data-reveal-id="myModal" class="radius button">Login</a>
+    <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <%= form_tag '/sessions/create' do  %>
         Email: 
         <%= email_field_tag :email %>
@@ -24,7 +25,10 @@
         <%= password_field_tag :password %>
         <%= submit_tag "Log In" %>
      <% end %>
+     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+   </div>
 <% end %>
+
 
     <%= yield %>
 
