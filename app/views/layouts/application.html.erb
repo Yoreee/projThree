@@ -14,6 +14,7 @@
 
   <body>
     <% if session[:user_id] %>
+     <%= link_to("Profile", "/users/" + session[:user_id].to_s) %>
      <%= link_to("Log Out", "/sessions", method: :delete) %>
     <% else %>
     <a href="#" data-reveal-id="myModal" class="radius button">Login</a>

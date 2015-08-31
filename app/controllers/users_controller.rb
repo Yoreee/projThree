@@ -12,6 +12,8 @@ class UsersController < ApplicationController
     def show
         puts params
         @user = User.find(session[:user_id])
+        @event = Event.where(user_id: session[:user_id])
+        render :show
     end
 
     def edit
