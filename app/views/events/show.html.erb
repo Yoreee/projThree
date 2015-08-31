@@ -1,0 +1,12 @@
+<% @response["Events"].each do |f| %>
+	<div>
+		<h2> <%= f["Venue"]["Name"] %> </h2>
+		<h3> <%= f["Date"] %> </h3>
+		<p> <%= f["Venue"]["City"] %>, <%= f["Venue"]["State"] %> </p>
+		<p> Artists: </p>
+		<% f["Artists"].each do |a| %>
+			<p> <%= a["Name"] %> </p>
+		<% end %>
+		<a href="<%= f["TicketUrl"] %>">Buy Tickets</a>
+	</div>
+<% end %>
