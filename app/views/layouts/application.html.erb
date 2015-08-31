@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>ConcertApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<% if session[:user_id] %>
-  	<%= link_to("Log Out", "/sessions", method: :delete) %>
-<% else %>
-	<%= form_tag '/sessions/create' do  %>
-	    Email: 
-	    <%= email_field_tag :email %>
-	    Password: 
-	    <%= password_field_tag :password %>
-	    <%= submit_tag "Log In" %>
-  	<% end %>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <% if session[:user_id] %>
+     <%= link_to("Log Out", "/sessions", method: :delete) %>
+    <% else %>
+    
+    <%= form_tag '/sessions/create' do  %>
+        Email: 
+        <%= email_field_tag :email %>
+        Password: 
+        <%= password_field_tag :password %>
+        <%= submit_tag "Log In" %>
+     <% end %>
 <% end %>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
