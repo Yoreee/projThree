@@ -1,0 +1,3 @@
+<% @response["Artists"].each do |a| %>
+	<a href="/events/search/<%=a["Id"]%>"><h2> <%= a["Name"] %> </h2></a>
+<% end %>
