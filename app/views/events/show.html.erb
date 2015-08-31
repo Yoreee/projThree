@@ -3,11 +3,13 @@
 	<div>
 		<h2> <%= f["Venue"]["Name"] %> </h2>
 		<h3> <%= f["Date"] %> </h3>
-		<p> <%= f["Venue"]["City"] %>, <%= f["Venue"]["State"] %> </p>
+		<h3> <%= f["Venue"]["City"] %>, <%= f["Venue"]["State"] %> </h3>
 		<p> Artists: </p>
+		<ul>
 		<% f["Artists"].each do |a| %>
-			<p> <%= a["Name"] %> </p>
+			<li> <%= a["Name"] %> </li>
 		<% end %>
+		</ul>
 		<a href="<%= f["TicketUrl"] %>">Buy Tickets</a>
 	</div>
 <% end %>
