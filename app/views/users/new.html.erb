@@ -1,0 +1,11 @@
+<%= form_for @user do |f| %>
+<%= f.label 'Enter your name' %>
+<%= f.text_field :name %>
+<%= f.label 'Enter your email' %>
+<%= f.text_field :email %>
+<%= f.label 'Enter a password' %>
+<%= f.password_field :password %>
+<%= f.label 'Name a favorite band' %>
+<%= f.text_field :favorite_band %>
+<%= f.submit 'Create Account' %>
+<% end %>
