@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   post '/sessions/create' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy'
   resources :users
-  post '/events/search/' => 'events#search'
+  post '/events/search/location/' => 'events#search_location'
+  post '/events/search/artist/' => 'events#search_artist'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

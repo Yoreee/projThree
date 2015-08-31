@@ -1,5 +1,11 @@
-<%= form_tag '/events/search/' do  %>
+<%= form_tag '/events/search/location/' do  %>
 	    ZIP Code: 
 	    <%= search_field_tag :zip %>
+	    <%= submit_tag "Search" %>
+<% end %>
+
+<%= form_tag '/events/search/artist/' do  %>
+	    Artist Name: 
+	    <%= search_field_tag :artist %>
 	    <%= submit_tag "Search" %>
 <% end %>
