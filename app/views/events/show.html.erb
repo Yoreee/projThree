@@ -1,7 +1,8 @@
 <% @response["Events"].each do |event| %>
     <div>
+    	<% time = DateTime.parse(event.event_date) %>
         <h2> <%= event.venue_name %> </h2>
-        <h3> <%= event.event_date %> </h3>
+        <h3> <%= time.to_formatted_s(:long_ordinal) %> </h3>
         <h3> <%= event.venue_city %>, <%= event.venue_state %> </h3>
         <p> Artists: </p>
         <ul>
