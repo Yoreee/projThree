@@ -5,8 +5,8 @@
         <h3> <%= event.venue_city %>, <%= event.venue_state %> </h3>
         <p> Artists: </p>
         <ul>
-        <% event.artists.each do |a| %>
-            <li> <%= a["Name"] %> </li>
+        <% event.artists.each do |artist| %>
+            <li> <%= artist.split(/"/)[5] %> </li>
         <% end %>
         </ul>
         <a href="<%= event.ticket_url %>">Buy Tickets</a>
