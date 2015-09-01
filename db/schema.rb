@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20150828182314) do
     t.string  "venue_name"
     t.string  "venue_city"
     t.string  "venue_state"
-    t.string  "artists"
+    t.text    "artists",     default: [], array: true
     t.string  "ticket_url"
     t.integer "user_id"
   end

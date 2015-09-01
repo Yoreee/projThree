@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post '/events/search/location/' => 'events#search_location'
   post '/events/search/artist/' => 'events#search_artist'
   get '/events/search/:id' => 'events#search_id'
+  post '/events' => 'events#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
