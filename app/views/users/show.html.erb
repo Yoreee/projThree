@@ -1,16 +1,28 @@
-<h2>Name: <%= @user.name %></h2>
+<div id="userProfileInfo">
+    <h4>User Profile</h4> 
+      <hr>
 
-<h2>Email: <%= @user.email%></h2>
+    <p class='userInfo'>Name: <%= @user.name %></p>
 
-<h3>Favorite Band: <%= @user.favorite_band %></h3>
+    <p class='userInfo'>Email: <%= @user.email%></p>
 
-<%= link_to 'Edit User Info', edit_user_path(@user) %>
+    <p class='userInfo'>Favorite Band: <%= @user.favorite_band %></p>
 
-<% @event.each do |f| %>
-	<div>
-		<h3><%= f.venue_name %></h3>
-		<p><%= f.event_date %></p>
-		<p><%= f.venue_city %>, <%= f.venue_state %></p>
-		<a href="<%=f.ticket_url%>">Buy Tickets</a>
-	</div>
-<% end %>
+<%= link_to 'Edit User Info', edit_user_path(@user), :class => 'button tiny' %>
+</div>
+
+<div class="eventWrapper">
+    <h4>Saved Events</h4> 
+      <hr>
+    <div class="medium-6 large-3 columns">   
+        <% @event.each do |f| %>
+        	<div class="eventInfo">
+                <p><%= f.artist %></p>
+        		<p><%= f.venue_name %></p>
+        		<p><%= f.event_date %></p>
+        		<p><%= f.venue_city %>, <%= f.venue_state %></p>
+        		<a class="button tiny" href="<%=f.ticket_url%>">Buy Tickets</a>
+        	</div>
+            <% end %>
+    </div>
+</div>

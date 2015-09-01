@@ -26,13 +26,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Header Styles */
 #header {
     min-height: 120px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 #mainHeading {
     font-weight: 700;
     width: 100%;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .loginButton {
@@ -52,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 a.item {
     font-size: 11px;
     padding: 12px;
+    white-space: nowrap;
 }
 
 a.item:hover{
@@ -96,13 +98,24 @@ input[type="text"], input[type="password"]{
 
 /* Main Div Styles */
 #main {
-
+    min-height: 570px;
 }
 
+#searchHeading {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.columns {
+    padding-left: 0;
+}
+
+
+/* Footer Styles */
 footer{
-    position: absolute;
-    bottom: 0;
-    width: 75%;
+    //position: absolute;
+    //bottom: 0;
+    //width: 75%;
 }
 
 a.backToTop {
@@ -122,12 +135,13 @@ a.backToTop {
 
     #mainHeading {
         float: left;
-        width: 50%;
+        width: 38%;
         text-align: none;
+        white-space: nowrap;
     }
 
     .icon-bar {
-        width: 40%;
+        width: 44%;
         float:right;
     }
 }

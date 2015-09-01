@@ -1,8 +1,9 @@
+<div class="row">
 <% @response["Events"].each do |event| %>
-    <div>
-        <h2> <%= event.venue_name %> </h2>
-        <h3> <%= event.event_date %> </h3>
-        <h3> <%= event.venue_city %>, <%= event.venue_state %> </h3>
+    <div class="medium-6 large-4 columns">
+        <h3> <%= event.venue_name %> </h3>
+        <p> <%= event.event_date %> </p>
+        <p> <%= event.venue_city %>, <%= event.venue_state %> </p>
         <p> Artists: </p>
         <ul>
         <% event.artists.each do |artist| %>
@@ -11,6 +12,8 @@
         </ul>
         <a href="<%= event.ticket_url %>">Buy Tickets</a>
 
+        <%= social_share_button_tag("My Site") %>
+
         <%= form_for event, :url => {:method => :post, :action=>'create', :controller=>'events'} do |f|%>
             <%= f.hidden_field :venue_name, value: event.venue_name %>
             <%= f.hidden_field :event_date, value: event.event_date %>
@@ -18,7 +21,8 @@
             <%= f.hidden_field :venue_state, value: event.venue_state %>
             <%= f.hidden_field :artists, value: event.artists %>
             <%= f.hidden_field :user_id, value: event.user_id %>
-            <%= f.submit %>
+            <%= f.submit 'Save Event', :class => 'submitButton' %>
         <%end%>
     </div>
 <% end %>
+</div>
