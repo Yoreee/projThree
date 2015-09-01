@@ -1,0 +1,85 @@
+body {
+    font-family: 'Syncopate', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syncopate', sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 25px;
+    border: 1px solid white;
+}
+
+#header {
+    height: 120px;
+}
+
+#mainHeading {
+    font-weight: 700;
+    float: left;
+}
+
+.loginButton {
+    width: 80%;
+    margin: 6px 10px;
+}
+
+input.submitButton {
+    padding: 10px 16px;
+    background: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Syncopate', sans-serif;
+    margin: 15px 0px;
+}
+
+.button {
+    font-family: 'Syncopate', sans-serif;
+}
+
+input.submitButton:hover, .button:hover {
+    opacity: .8;
+}
+
+form {
+    margin: 25px 0px;
+}
+
+label {
+    color: white;
+}
+
+input[type="text"], input[type="password"]{
+    margin: 10px 0;
+}
+
+.reveal-modal {
+    background-color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .reveal-modal {
+        width: 55%;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .reveal-modal {
+        width: 35%;
+    }
+
+    .loginButton {
+        float: right;
+        width: 23%;
+        margin: 6px 10px;
+    }
+
+
+}
