@@ -13,10 +13,10 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
-			# redirect to landing page with logic for sessions?
 			redirect_to root_path
 		else
-			# figure out what happens with invalid login info
+			flash[:notice] = "Login failed."
+			redirect_to root_path
 		end
 	end
 

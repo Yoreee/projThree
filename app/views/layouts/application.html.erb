@@ -37,7 +37,9 @@
         </div>
       <% end %>
     </div> <!-- end header div -->
-   
+	   <% if flash[:notice] %>
+	    <div class="notice"><%= flash[:notice] %></div>
+	  <% end %>
    <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
       <%= form_tag '/sessions/create' do  %>
           Email: 
