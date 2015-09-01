@@ -10,7 +10,7 @@
             <li> <%= artist.split(/"/)[5] %> </li>
         <% end %>
         </ul>
-        <a href="<%= event.ticket_url %>">Buy Tickets</a>
+        <a class="button tiny" href="<%= event.ticket_url %>">Buy Tickets</a>
 
         <%= social_share_button_tag("My Site") %>
 

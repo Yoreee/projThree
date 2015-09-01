@@ -73,6 +73,7 @@ input.submitButton {
 
 .button {
     font-family: 'Syncopate', sans-serif;
+    border-radius: 3px;
 }
 
 input.submitButton:hover, .button:hover {
