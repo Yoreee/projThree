@@ -1,6 +1,13 @@
+/* Mobile First Styles */
+
 body {
     font-family: 'Syncopate', sans-serif;
     background-color: black;
+    background: url(img.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: white;
 }
 
@@ -13,23 +20,45 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1170px;
     margin: 0 auto;
     padding: 25px;
-    border: 1px solid white;
+    //border: 1px solid white;
 }
 
+/* Header Styles */
 #header {
-    height: 120px;
+    min-height: 120px;
+    margin-bottom: 40px;
 }
 
 #mainHeading {
     font-weight: 700;
-    float: left;
+    width: 100%;
+    text-align: center;
 }
 
 .loginButton {
     width: 80%;
     margin: 6px 10px;
 }
+/* Navigation styles */
+.icon-bar.vertical, .icon-bar.small-vertical{
+   float: right;  
+   width: 85px;  
+}
 
+.icon-bar {
+    width: 100%;
+}
+
+a.item {
+    font-size: 11px;
+    padding: 12px;
+}
+
+a.item:hover{
+    color:white;
+}
+
+/* Form Styles */
 input.submitButton {
     padding: 10px 16px;
     background: #008CBA;
@@ -60,16 +89,50 @@ input[type="text"], input[type="password"]{
     margin: 10px 0;
 }
 
+/* Modal Styles */
 .reveal-modal {
     background-color: black;
 }
 
+/* Main Div Styles */
+#main {
+
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 75%;
+}
+
+a.backToTop {
+    position: relative;
+    float: right;
+    font-size: 12px;
+    color: white;
+    bottom: 22px;
+}
+
+
+/* Tablet Styles */
 @media only screen and (min-width: 768px) {
     .reveal-modal {
         width: 55%;
     }
+
+    #mainHeading {
+        float: left;
+        width: 50%;
+        text-align: none;
+    }
+
+    .icon-bar {
+        width: 40%;
+        float:right;
+    }
 }
 
+/* Desktop Styles */
 @media only screen and (min-width: 1025px) {
     .reveal-modal {
         width: 35%;

@@ -40,6 +40,8 @@ group :development, :test do
 
   gem 'httparty'
 
+  gem 'font-awesome-rails', '~> 4.4.0.0'
+
   gem 'foundation-rails'
 
   # Access an IRB console on exception pages or by using <%= console %> in views

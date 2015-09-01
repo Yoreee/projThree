@@ -11,6 +11,7 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <link href='https://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -18,27 +19,44 @@
       <div id="header">
         <h1 id="mainHeading">Concert App</h1>
       
-    <% if session[:user_id] %>
-     <%= link_to("Profile", "/users/" + session[:user_id].to_s) %>
-     <%= link_to("Log Out", "/sessions", method: :delete) %>
+      <% if session[:user_id] %>
+       <div class="icon-bar three-up" role="navigation">
+          <a href="/" class="item" role="button" tabindex="0" aria-label="home"><i class="fa fa-home"></i>Home</a>
+
+         <%= link_to(fa_icon("user", text: "My Profile"), "/users/" + session[:user_id].to_s, class: 'item', role: 'button', tabindex: 0, ) %> 
+        
+         <%= link_to(fa_icon("sign-out", text: "Log Out"), "/sessions", method: :delete, class: 'item', role: 'button', tabindex: 0,) %>
+       </div>
     <% else %>
-    <a href="#" data-reveal-id="myModal" class="loginButton radius button">Login</a>
-    <a href="/users/new" class="loginButton radius button">Create Account</a>
-    </div>
-    <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-    <%= form_tag '/sessions/create' do  %>
-        Email: 
-        <%= email_field_tag :email %>
-        Password: 
-        <%= password_field_tag :password %>
-        <%= submit_tag "Log In", :class => 'submitButton'%>
-     <% end %>
-     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-   </div>
-<% end %>
+        <div class="icon-bar three-up" role="navigation">
+          <a href="/" class="item" role="button" tabindex="0" aria-label="home"><i class="fa fa-home"></i>Home</a>
+            
+          <a class="item" role="button" tabindex="0" aria-label="login" data-reveal-id="myModal"><i class="fa fa-sign-in"></i>Login</a>
+            
+          <a href="/users/new" class="item" role="button" tabindex="0" aria-label="account"><i class="fa fa-user"></i>Create Account</a>
+        </div>
+      <% end %>
+    </div> <!-- end header div -->
+   
+   <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= form_tag '/sessions/create' do  %>
+          Email: 
+          <%= email_field_tag :email %>
+          Password: 
+          <%= password_field_tag :password %>
+          <%= submit_tag "Log In", :class => 'submitButton'%>
+       <% end %>
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+   </div> <!-- end modal div -->
 
 
-    <%= yield %>
+      <div id="main">
+
+        <%= yield %>
+
+      </div> <!-- end main div -->
+      
+     <footer><a href="#top" class="backToTop">Back to Top <i class="fa fa-chevron-up"></i></a></footer>
     </div> <!-- end container div -->
   </body>
 </html>
