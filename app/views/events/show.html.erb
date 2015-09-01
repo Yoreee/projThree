@@ -1,8 +1,9 @@
 
 <% @response["Events"].each do |f| %>
 	<div>
+		<% time = Time.at(f["Date"].to_i) %>
 		<h2> <%= f["Venue"]["Name"] %> </h2>
-		<h3> <%= f["Date"] %> </h3>
+		<h3> <%= time.to_formatted_s(:long_ordinal) %> </h3>
 		<h3> <%= f["Venue"]["City"] %>, <%= f["Venue"]["State"] %> </h3>
 		<p> Artists: </p>
 		<ul>
