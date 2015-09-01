@@ -8,6 +8,22 @@ class EventsController < ApplicationController
 
 	def search_location
 		@response = HTTParty.get("http://api.jambase.com/events?zipCode=" + params[:zip] + "&page=0&api_key=" + ENV["JAMBASE_VAR"] + "&o=json")
+		@response["Events"].map! do |event|
+			# event = JSON.parse(event)
+			event_attrs = {
+				event_date: event["Date"],
+				venue_name: event["Venue"]["Name"],
+				venue_city: event["Venue"]["City"],
+				venue_state: event["Venue"]["State"],
+				artists: event["Artists"],
+				ticket_url: event["TicketUrl"],
+				user_id: session[:user_id]
+			}
+
+			Event.new(event_attrs) 
+		end
+
+		
 		render :show
 	end
 
@@ -26,7 +42,8 @@ class EventsController < ApplicationController
 				venue_city: event["Venue"]["City"],
 				venue_state: event["Venue"]["State"],
 				artists: event["Artists"],
-				ticket_url: event["TicketUrl"]
+				ticket_url: event["TicketUrl"],
+				user_id: session[:user_id]
 			}
 
 			Event.new(event_attrs) 
@@ -39,12 +56,12 @@ class EventsController < ApplicationController
 
 	def create
 		@events = Event.create(event_params)
-		redirect_to :back
+		redirect_to root_path
 	end
 
 	private
 
 	def event_params
-		params.require(:event).permit(:event_date, :venue_name, :venue_city, :venue_state, :artists, :ticket_url)
+		params.require(:event).permit(:event_date, :venue_name, :venue_city, :venue_state, :artists, :ticket_url, :user_id)
 	end
 end
