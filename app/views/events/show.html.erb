@@ -1,15 +1,24 @@
+<% @response["Events"].each do |event| %>
+    <div>
+        <h2> <%= event.venue_name %> </h2>
+        <h3> <%= event.event_date %> </h3>
+        <h3> <%= event.venue_city %>, <%= event.venue_state %> </h3>
+        <p> Artists: </p>
+        <ul>
+        <% event.artists.each do |a| %>
+            <li> <%= a["Name"] %> </li>
+        <% end %>
+        </ul>
+        <a href="<%= event.ticket_url %>">Buy Tickets</a>
 
-<% @response["Events"].each do |f| %>
-	<div>
-		<h2> <%= f["Venue"]["Name"] %> </h2>
-		<h3> <%= f["Date"] %> </h3>
-		<h3> <%= f["Venue"]["City"] %>, <%= f["Venue"]["State"] %> </h3>
-		<p> Artists: </p>
-		<ul>
-		<% f["Artists"].each do |a| %>
-			<li> <%= a["Name"] %> </li>
-		<% end %>
-		</ul>
-		<a href="<%= f["TicketUrl"] %>">Buy Tickets</a>
-	</div>
+        <%= form_for event, :url => {:method => :post, :action=>'create', :controller=>'events'} do |f|%>
+            <%= f.hidden_field :venue_name, value: event.venue_name %>
+            <%= f.hidden_field :event_date, value: event.event_date %>
+            <%= f.hidden_field :venue_city, value: event.venue_city %>
+            <%= f.hidden_field :venue_state, value: event.venue_state %>
+            <%= f.hidden_field :artists, value: event.artists %>
+            <%= f.hidden_field :user_id %>
+            <%= f.submit %>
+        <%end%>
+    </div>
 <% end %>
