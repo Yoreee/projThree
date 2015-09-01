@@ -16,10 +16,11 @@
       <hr>
     <div class="medium-6 large-3 columns">   
         <% @event.each do |f| %>
+
+        <% time = DateTime.parse(f.event_date) %>
         	<div class="eventInfo">
-                <p><%= f.artist %></p>
         		<p><%= f.venue_name %></p>
-        		<p><%= f.event_date %></p>
+        		<p><%= time.to_formatted_s(:long_ordinal) %></p>
         		<p><%= f.venue_city %>, <%= f.venue_state %></p>
         		<a class="button tiny" href="<%=f.ticket_url%>">Buy Tickets</a>
         	</div>

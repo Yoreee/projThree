@@ -111,6 +111,10 @@ input[type="text"], input[type="password"]{
     padding-left: 0;
 }
 
+#userProfileInfo {
+    margin-bottom: 30px;
+}
+
 
 /* Footer Styles */
 footer{
@@ -137,7 +141,7 @@ a.backToTop {
     #mainHeading {
         float: left;
         width: 38%;
-        text-align: none;
+        text-align: left;
         white-space: nowrap;
     }
 
