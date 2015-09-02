@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/sessions/create' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy'
   resources :users
+  get '/events/:id' => 'events#show'
   post '/events/search/location/' => 'events#search_location'
   post '/events/search/artist/' => 'events#search_artist'
   get '/events/search/:id' => 'events#search_id'

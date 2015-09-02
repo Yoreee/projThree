@@ -13,10 +13,8 @@ The Project Trello Board Link: https://trello.com/b/kaaEYn0j
 
 ####User Stories
 Users Can Do the Following:
-1. Search for music events by location.
-2. Search for music events by genre
-3. Search for music events by venue
-4. Search for music events by artist
+1. Search for music events by zip code.
+2. Search for music events by artist
 5. Create a login account to save search favorites.
    Log In/Out (sessions)
 6. Receive email alert when tickets go on sale.

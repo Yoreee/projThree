@@ -17,4 +17,4 @@
 //= require social-share-button
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation('reveal', 'reflow'); });

@@ -2,9 +2,9 @@
 <% @response["Events"].each do |event| %>
 	<div class="medium-6 large-4 columns">
     	<% time = DateTime.parse(event.event_date) %>
-        <h2> <%= event.venue_name %> </h2>
-        <h3> <%= time.to_formatted_s(:long_ordinal) %> </h3>
-        <h3> <%= event.venue_city %>, <%= event.venue_state %> </h3>
+        <p class="venueName"> <%= event.venue_name %> </p>
+        <p> <%= time.to_formatted_s(:long_ordinal) %> </p>
+        <p> <%= event.venue_city %>, <%= event.venue_state %> </p>
         <p> Artists: </p>
         <ul>
         <% event.artists.each do |artist| %>
@@ -12,8 +12,6 @@
         <% end %>
         </ul>
         <a class="button tiny" href="<%= event.ticket_url %>">Buy Tickets</a>
-
-        <%= social_share_button_tag("My Site") %>
 
         <%= form_for event, :url => {:method => :post, :action=>'create', :controller=>'events'} do |f|%>
             <%= f.hidden_field :venue_name, value: event.venue_name %>
@@ -24,6 +22,7 @@
             <%= f.hidden_field :user_id, value: event.user_id %>
             <%= f.submit 'Save Event', :class => 'submitButton' %>
         <%end%>
+        <%= social_share_button_tag("My Site") %>
     </div>
 <% end %>
 </div>

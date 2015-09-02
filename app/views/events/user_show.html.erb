@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="large-6 columns">
+        <div id="googleMap">
+          <% url = 'https://www.google.com/maps/embed/v1/place?key='+ ENV["GOOGLE_MAPS_VAR"] + '&q='+ @event.venue_name %>
+          <iframe width='400px' height='400px' frameborder='0' style='border:0;' src='<%= url %>'>
+           </iframe>
+        </div>
+    </div>
+
+    <div class="large-6 columns">
+        <div class="venueInfo">
+            <% time = DateTime.parse(@event.event_date) %>
+            <p><%= time.to_formatted_s(:long_ordinal) %></p>
+            <% @event.artists.each do |artist| %>
+            <p><%= artist %></p>
+            <% end %>
+            <p><%= @event.venue_name %></p>
+            <p><%= @event.venue_city %>, <%= @event.venue_state %></p>
+            <a class="button tiny" href="<%=@event.ticket_url%>">Buy Tickets</a>
+        </div>
+    </div>
+</div>  
