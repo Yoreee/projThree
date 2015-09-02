@@ -1,7 +1,7 @@
 <div id="userProfileInfo">
     <h4>User Profile</h4> 
       <hr>
-      <%= image_tag @user.image.url(:medium) %>
+    <%= image_tag @user.image.url(:medium), :class => 'image' %>
 
     <p class='userInfo'>Name: <%= @user.name %></p>
 
