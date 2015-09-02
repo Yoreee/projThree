@@ -1,8 +1,9 @@
 <div id="userProfileInfo">
     <h4>User Profile</h4> 
       <hr>
-      <%= image_tag @user.image.url(:medium) %>
-
+      <% if @user.image_file_name %>
+      	<%= image_tag @user.image.url(:medium) %>
+      <% end %>
     <p class='userInfo'>Name: <%= @user.name %></p>
 
     <p class='userInfo'>Email: <%= @user.email%></p>
@@ -34,9 +35,8 @@
         		<p><%= f.artists[17].to_s.split(/>/)[1] %> </p>
         		<p><%= f.artists[19].to_s.split(/>/)[1] %> </p>
         		<p><%= f.artists[21].to_s.split(/>/)[1] %> </p>
-        		<a class="button tiny" href="<%=f.ticket_url%>">Buy Tickets</a>
         		<a class="button tiny" href="<%=f.ticket_url%>" target="_blank">Buy Tickets</a>
-                <a href="/events/<%= f.id %>" class="item" role="button" tabindex="0" aria-label="login">View Map</a>
+                <a href="/events/<%= f.id %>" class="item" role="button">View Map</a>
             </div>
         	</div>
         <% end %>
