@@ -1,14 +1,14 @@
 <div id="userProfileInfo">
     <h4>User Profile</h4> 
       <hr>
-<<<<<<< HEAD
-    <%= image_tag @user.image.url(:medium), :class => 'image' %>
 
-=======
+    
+
+
       <% if @user.image_file_name %>
-      	<%= image_tag @user.image.url(:medium) %>
+      	<%= image_tag @user.image.url(:medium), :class => 'image' %>
       <% end %>
->>>>>>> 33c45e5e2923ac9806cbfd2e290a4c56b25af105
+
     <p class='userInfo'>Name: <%= @user.name %></p>
 
     <p class='userInfo'>Email: <%= @user.email%></p>
