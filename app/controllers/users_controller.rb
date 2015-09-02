@@ -5,8 +5,14 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.create(user_params)
-        redirect_to root_path
+        @user = User.new(user_params)
+        if @user.save
+          # Deliver the signup email
+          UserNotifier.send_signup_email(@user).deliver
+          redirect_to root_path
+        else
+          render :action => 'new'
+        end
     end
 
     def show

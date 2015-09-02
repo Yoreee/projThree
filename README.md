@@ -9,6 +9,8 @@ Riaz Bacchus, Katerina Burshteyn, Heather Kemp, David Nash
 
 The Project Trello Board Link: https://trello.com/b/kaaEYn0j
 
+**Link to App on Heroku:** https://quiet-ridge-3116.herokuapp.com/
+
 ##Artifacts
 
 ####User Stories
@@ -17,7 +19,8 @@ Users Can Do the Following:
 2. Search for music events by artist
 3. Create a login account to save search favorites.
    Log In/Out (sessions)
-4. View event details, which includes links to purchase tickets and a google map.
+4. Receive a welcome email after creating an account.  
+5. View event details, which includes links to purchase tickets and a google map.
 
 ####Front-end Wireframes
 ![alt text](./projThree_Wireframes.jpg "Wireframe Design for Project Three")

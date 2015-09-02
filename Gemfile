@@ -47,6 +47,8 @@ group :development, :test do
   gem 'foundation-rails'
 
   gem 'social-share-button', '~> 0.1.6'
+  
+  gem 'sendgrid', '~> 1.2.0'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
