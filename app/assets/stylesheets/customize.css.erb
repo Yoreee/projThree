@@ -3,7 +3,7 @@
 body {
     font-family: 'Syncopate', sans-serif;
     background-color: black;
-    background: url(img.jpg) no-repeat center center fixed; 
+    background: url('<%= asset_path('img.jpg') %>') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -25,13 +25,14 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1170px;
     margin: 0 auto;
     padding: 25px;
-    //border: 1px solid white;
+    border: 1px solid white;
 }
 
 /* Header Styles */
 #header {
     min-height: 120px;
     margin-bottom: 35px;
+
 }
 
 #mainHeading {
@@ -79,6 +80,9 @@ input.submitButton {
 .button {
     font-family: 'Syncopate', sans-serif;
     border-radius: 3px;
+}
+.image {
+    border: 5px solid #007095;
 }
 
 input.submitButton:hover, .button:hover {
