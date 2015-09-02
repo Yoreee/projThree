@@ -22,7 +22,7 @@
         		<p><%= f.venue_name %></p>
         		<p><%= time.to_formatted_s(:long_ordinal) %></p>
         		<p><%= f.venue_city %>, <%= f.venue_state %></p>
-        		<a class="button tiny" href="<%=f.ticket_url%>">Buy Tickets</a>
+        		<a class="button tiny" href="<%=f.ticket_url%>" target="_blank">Buy Tickets</a>
                 <a href="/events/<%= f.id %>" class="item" role="button" tabindex="0" aria-label="login">View Map</a>
             </div>
         	</div>

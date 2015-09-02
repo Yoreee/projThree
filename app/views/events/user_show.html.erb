@@ -12,11 +12,11 @@
             <% time = DateTime.parse(@event.event_date) %>
             <p><%= time.to_formatted_s(:long_ordinal) %></p>
             <% @event.artists.each do |artist| %>
-            <p><%= artist %></p>
+            <p><%= artist.split(/>/)[1] %></p>
             <% end %>
             <p><%= @event.venue_name %></p>
             <p><%= @event.venue_city %>, <%= @event.venue_state %></p>
-            <a class="button tiny" href="<%=@event.ticket_url%>">Buy Tickets</a>
+            <a class="button tiny" href="<%=@event.ticket_url%>" target="_blank">Buy Tickets</a>
         </div>
     </div>
 </div>  
