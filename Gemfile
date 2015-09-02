@@ -39,6 +39,8 @@ group :development, :test do
   gem 'pry-rails'
 
   gem 'httparty'
+  gem 'paperclip', '~> 4.3.0'
+  gem 'aws-sdk'
 
   gem 'font-awesome-rails', '~> 4.4.0.0'
 
