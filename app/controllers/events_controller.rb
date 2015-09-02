@@ -6,6 +6,11 @@ class EventsController < ApplicationController
 
 	end
 
+	def show
+		@event = Event.find(params[:id])
+		render :user_show
+	end
+
 	def search_location
 		@response = HTTParty.get("http://api.jambase.com/events?zipCode=" + params[:zip] + "&page=0&api_key=" + ENV["JAMBASE_VAR"] + "&o=json")
 		@response["Events"].map! do |event|
