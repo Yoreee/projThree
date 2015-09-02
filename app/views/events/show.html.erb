@@ -21,6 +21,7 @@
             <%= f.hidden_field :venue_city, value: event.venue_city %>
             <%= f.hidden_field :venue_state, value: event.venue_state %>
             <%= f.hidden_field :artists, value: event.artists %>
+            <%= f.hidden_field :ticket_url, value: event.ticket_url %>
             <%= f.hidden_field :user_id, value: event.user_id %>
             <%= f.submit 'Save Event', :class => 'submitButton' %>
         <%end%>
