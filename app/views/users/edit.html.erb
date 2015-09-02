@@ -3,14 +3,14 @@
 	<title></title>
 </head>
 <body>
-	<h1>Edit Form</h1>
+	<h3>Edit User Profile Info</h3>
 
 	<%= form_for @user do |f| %>
 	    <%= f.file_field :image, placeholder: :image%><br>
 	    <%= f.text_field :name, placeholder: 'name' %> <br>
 	    <%= f.text_field :email, placeholder: 'email' %> <br>
 	    <%= f.text_field :favorite_band, placeholder: 'favorite_band' %>
-	    <%= f.submit %>
+	    <%= f.submit :class => 'submitButton'%>
   	<% end %>
 </body>
 </html>
