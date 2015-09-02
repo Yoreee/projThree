@@ -1,8 +1,14 @@
 <div id="userProfileInfo">
     <h4>User Profile</h4> 
       <hr>
+<<<<<<< HEAD
     <%= image_tag @user.image.url(:medium), :class => 'image' %>
 
+=======
+      <% if @user.image_file_name %>
+      	<%= image_tag @user.image.url(:medium) %>
+      <% end %>
+>>>>>>> 33c45e5e2923ac9806cbfd2e290a4c56b25af105
     <p class='userInfo'>Name: <%= @user.name %></p>
 
     <p class='userInfo'>Email: <%= @user.email%></p>
@@ -23,8 +29,19 @@
         		<p><%= f.venue_name %></p>
         		<p><%= time.to_formatted_s(:long_ordinal) %></p>
         		<p><%= f.venue_city %>, <%= f.venue_state %></p>
+        		<p><%= f.artists[1].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[3].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[5].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[7].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[9].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[11].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[13].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[15].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[17].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[19].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[21].to_s.split(/>/)[1] %> </p>
         		<a class="button tiny" href="<%=f.ticket_url%>" target="_blank">Buy Tickets</a>
-                <a href="/events/<%= f.id %>" class="item" role="button" tabindex="0" aria-label="login">View Map</a>
+                <a href="/events/<%= f.id %>" class="item" role="button">View Map</a>
             </div>
         	</div>
         <% end %>
