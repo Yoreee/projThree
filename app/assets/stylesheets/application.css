@@ -16,4 +16,5 @@
  *= require font-awesome
  *= require social-share-button
 
+//= depend_on_asset "img.jpg"
  */
