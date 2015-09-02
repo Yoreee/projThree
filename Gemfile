@@ -30,7 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 
 gem 'social-share-button', '~> 0.1.6'
-
+gem 'rails_12factor'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Call 'byebug' anywhere in the code to stop execution and get a debugger console
