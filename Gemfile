@@ -29,6 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem 'social-share-button', '~> 0.1.6'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -46,7 +48,7 @@ group :development, :test do
 
   gem 'foundation-rails'
 
-  gem 'social-share-button', '~> 0.1.6'
+
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
