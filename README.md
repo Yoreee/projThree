@@ -15,26 +15,33 @@ The Project Trello Board Link: https://trello.com/b/kaaEYn0j
 Users Can Do the Following:
 1. Search for music events by zip code.
 2. Search for music events by artist
-5. Create a login account to save search favorites.
+3. Create a login account to save search favorites.
    Log In/Out (sessions)
-6. Receive email alert when tickets go on sale.
+4. View event details, which includes links to purchase tickets and a google map.
 
 ####Front-end Wireframes
-
+![alt text](./projThree_Wireframes.jpg "Wireframe Design for Project Three")
 
 ####Routes
-get '/' root#index<br>
-get '/searches' searches#show<br>
-post '/events'  events#create<br>
-delete '/events/:id'  events#destroy<br>
+get '/' events#index<br>
 get '/sessions/new'  sessions#new<br>
 post '/sessions'  session#create<br>
 delete '/sessions/:id' sessions#destroy<br>
 post '/users'  users#create<br>
-get '/users/:id'  users#show<br>
+get '/users/new'  users#new<br>
 get '/users/:id/edit' users#edit<br>
+get '/users/:id'  users#show<br>
 put '/users/:id'  users#update<br>
 delete '/users/:id'  users#destroy<br>
+get '/events/:id'  events#show<br>
+post '/events/search/location'  events#search_location<br>
+post '/events/search/artist'  events#search_artist<br>
+get '/events/search/:id'  events#search_id<br>
+post '/events'  events#create<br>
+delete '/events/:id'  events#destroy<br>
+
+
 
 
 ####Database Design
+![alt text](./projThree_DatabaseDesign.png "Database Design for Project Three")
