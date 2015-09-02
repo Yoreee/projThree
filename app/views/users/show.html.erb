@@ -22,6 +22,17 @@
         		<p><%= f.venue_name %></p>
         		<p><%= time.to_formatted_s(:long_ordinal) %></p>
         		<p><%= f.venue_city %>, <%= f.venue_state %></p>
+        		<p><%= f.artists[1].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[3].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[5].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[7].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[9].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[11].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[13].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[15].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[17].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[19].to_s.split(/>/)[1] %> </p>
+        		<p><%= f.artists[21].to_s.split(/>/)[1] %> </p>
         		<a class="button tiny" href="<%=f.ticket_url%>">Buy Tickets</a>
         	</div>
             <% end %>
