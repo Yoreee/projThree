@@ -6,6 +6,7 @@
 	<h1>Edit Form</h1>
 
 	<%= form_for @user do |f| %>
+	    <%= f.file_field :image, placeholder: :image%><br>
 	    <%= f.text_field :name, placeholder: 'name' %> <br>
 	    <%= f.text_field :email, placeholder: 'email' %> <br>
 	    <%= f.text_field :favorite_band, placeholder: 'favorite_band' %>
