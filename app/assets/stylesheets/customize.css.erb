@@ -3,11 +3,7 @@
 body {
     font-family: 'Syncopate', sans-serif;
     background-color: black;
-    background: url('<%= asset_path('img.jpg') %>') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    
     color: white;
 }
 
@@ -26,6 +22,14 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding: 25px;
     border: 1px solid white;
+    background: url('<%= asset_path('img.jpg')%>') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -moz-box-shadow:    0px 0px 16px 2px #ccc
+    -webkit-box-shadow: 0px 0px 16px 2px #ccc
+    box-shadow:         0px 0px 16px 2px #ccc
 }
 
 /* Header Styles */
@@ -36,10 +40,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mainHeading {
-    font-weight: 700;
     width: 100%;
     text-align: center;
     margin-bottom: 25px;
+}
+
+.otherFont {
+    font-family: 'Libre Baskerville', serif;
+    margin: 0px 10px;
+    color: #008CBA;
 }
 
 .loginButton {
@@ -113,7 +122,6 @@ input[type="text"], input[type="password"]{
 
 #searchHeading {
     text-align: left;
-    margin-left: 15px;
 }
 
 .columns {
@@ -124,12 +132,27 @@ input[type="text"], input[type="password"]{
     margin-bottom: 30px;
 }
 
+.eventWrapper {
+    margin-top:25px;
+}
+
+.searchInfo {
+    min-height: 500px;
+}
+
+.new_event {
+    margin: 0;
+}
+
+.social-share-button {
+    margin-top: 10px;
+}
 
 /* Footer Styles */
 footer{
-    //position: absolute;
-    //bottom: 0;
-    //width: 75%;
+    /*position: absolute;
+    bottom: 0;
+    width: 75%; */
 }
 
 a.backToTop {
@@ -157,6 +180,10 @@ a.backToTop {
     .icon-bar {
         width: 44%;
         float:right;
+    }
+
+    #editUserProfile {
+        width: 60%;
     }
 }
 
