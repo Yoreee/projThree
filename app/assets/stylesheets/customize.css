@@ -21,8 +21,8 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1170px;
     margin: 0 auto;
     padding: 25px;
-    border: 1px solid white;
-    background: url('<%= asset_path('img.jpg')%>') no-repeat center center fixed; 
+    border:1px solid white;
+    background: url(img.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -36,13 +36,13 @@ h1, h2, h3, h4, h5, h6 {
 #header {
     min-height: 120px;
     margin-bottom: 35px;
-
 }
 
 #mainHeading {
-    width: 100%;
+    max-width: 100%;
     text-align: center;
     margin-bottom: 25px;
+    
 }
 
 .otherFont {
@@ -90,6 +90,7 @@ input.submitButton {
     font-family: 'Syncopate', sans-serif;
     border-radius: 3px;
 }
+
 .image {
     border: 5px solid #007095;
 }
@@ -148,11 +149,12 @@ input[type="text"], input[type="password"]{
     margin-top: 10px;
 }
 
+
 /* Footer Styles */
 footer{
-    /*position: absolute;
+  /*position: absolute;
     bottom: 0;
-    width: 75%; */
+    width: 75%;*/
 }
 
 a.backToTop {

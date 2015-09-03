@@ -11,13 +11,14 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <link href='https://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
 
   <body>
     <div class="container">
       <div id="header">
-        <h1 id="mainHeading">Concert App</h1>
+        <h1 id="mainHeading">band<span class="otherFont">IT</span></h1>
       
       <% if session[:user_id] %>
        <div class="icon-bar three-up" role="navigation">

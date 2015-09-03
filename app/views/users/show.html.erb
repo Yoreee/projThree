@@ -1,14 +1,14 @@
 <div id="userProfileInfo">
     <h4>User Profile</h4> 
       <hr>
-
     
-
-
+    <div class="medium-6 medium-push-6 large-6 large-push-6 columns">
       <% if @user.image_file_name %>
       	<%= image_tag @user.image.url(:medium), :class => 'image' %>
       <% end %>
+    </div>
 
+    <div class="medium-6 medium-pull-6 large-6 large-pull-6 columns">
     <p class='userInfo'>Name: <%= @user.name %></p>
 
     <p class='userInfo'>Email: <%= @user.email%></p>
@@ -16,8 +16,9 @@
     <p class='userInfo'>Favorite Band: <%= @user.favorite_band %></p>
 
 <%= link_to 'Edit User Info', edit_user_path(@user), :class => 'button tiny' %>
+    </div>
 </div>
-
+<div class="clearfix"></div>
 <div class="eventWrapper">
     <h4>Saved Events</h4> 
       <hr>
@@ -40,11 +41,11 @@
         		<p><%= f.artists[17].to_s.split(/>/)[1] %> </p>
         		<p><%= f.artists[19].to_s.split(/>/)[1] %> </p>
         		<p><%= f.artists[21].to_s.split(/>/)[1] %> </p>
-        		<a class="button tiny" href="<%=f.ticket_url%>" target="_blank">Buy Tickets</a>
-                <a href="/events/<%= f.id %>" class="item" role="button">View Map</a>
+                <a href="/events/<%= f.id %>" class="item button tiny" role="button">View Map &amp; Details</a>
             </div>
         	</div>
         <% end %>
             
     </div>
 </div>
+<div class="clearfix"></div>
