@@ -1,8 +1,8 @@
 #WDI Project Three - Group Project
 
 ##Description
-Objective is to create a concert application that allows users to find upcoming events in their area, save those events to their account, and receive email alerts when tickets go on sale.  This project will use the following technologies:
-Ruby on Rails, HTML, CSS
+Objective is to create a concert application that allows users to find upcoming events in their area, save those events to their account, access a Google Map and receive a welcome email after registering.  This project will use the following technologies:
+Ruby on Rails, HTML, Foundation CSS Framework, JamBase API, Google Maps API, PaperClip
 
 **Team Members:**
 Riaz Bacchus, Katerina Burshteyn, Heather Kemp, David Nash
